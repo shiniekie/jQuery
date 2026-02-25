@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math in jQuery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+</head>
+<body>
+
+<div class="container d-flex justify-content-center mt-5">
+    <div class="card p-4 shadow-sm auto-card">
+
+        <h4 class="mb-3">Math in jQuery</h4>
+
+        <!-- INLINE INPUT ROW -->
+        <div class="d-flex gap-3 align-items-end flex-wrap inline-row">
+
+            <!-- First Number -->
+            <div class="flex-fill">
+                <label class="form-label">First Number:</label>
+                <input type="number" id="firstNumber" class="form-control">
+            </div>
+
+            <!-- Operator -->
+            <div class="flex-fill">
+                <label class="form-label">Operator</label>
+                <select id="operator" class="form-select">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="/">/</option>
+                    <option value="*">*</option>
+                </select>
+            </div>
+
+            <!-- Second Number -->
+            <div class="flex-fill">
+                <label class="form-label">Second Number:</label>
+                <input type="number" id="secondNumber" class="form-control">
+            </div>
+
+        </div>
+
+        <!-- Solve Button -->
+        <div class="mt-4 text-left">
+            <button class="btn btn-primary" id="solveBtn">Solve</button>
+        </div>
+
+        <!-- Result -->
+        <div class="mt-3 text-left">
+            <h5 id="result" class="result-text"></h5>
+        </div>
+
+    </div>
+</div>
+
+<!-- jQuery Script -->
+<script>
+$(document).ready(function() {
+    $("#solveBtn").click(function() {
+        let first = $("#firstNumber").val();
+        let second = $("#secondNumber").val();
+        let operator = $("#operator").val();
+        let $result = $("#result");
+
+        if (first === "" || second === "") {
+            $result.text("");
+            return;
+        }
+
+        first = parseFloat(first);
+        second = parseFloat(second);
+
+        let result;
+        switch(operator) {
+            case "+":
+                result = first + second;
+                break;
+            case "-":
+                result = first - second;
+                break;
+            case "*":
+                result = first * second;
+                break;
+            case "/":
+                result = (second === 0) ? "Cannot divide by zero" : first / second;
+                break;
+            default:
+                result = "Invalid operator";
+        }
+
+        $result.text("Result: " + result);
+    });
+});
+</script>
+
+</body>
+</html>
