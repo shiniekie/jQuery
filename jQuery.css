@@ -1,26 +1,17 @@
 body {
-    background-color: #ffffff; /* Pure white */
+    background-color: #ffffff;
     font-family: Arial, sans-serif;
 }
 
-/* Auto-fit card */
+/* Card Styling */
 .calculator-card {
     background-color: #ffffff;
     border-radius: 12px;
-    width: auto;
 }
 
-/* Input Styling */
-.custom-input {
-    width: 240px;
-    height: 45px;
-    border-radius: 10px;
-    background-color: #f8f9fa;
-}
-
-/* Operator Dropdown */
-.custom-operator {
-    width: 120px;
+/* Inputs and Operator Dropdown */
+.custom-input, .custom-operator {
+    width: 100%; /* Full width of the column */
     height: 45px;
     border-radius: 10px;
     background-color: #f8f9fa;
@@ -28,7 +19,6 @@ body {
 
 /* Solve Button */
 .solve-btn {
-    width: 120px; /* Half of input (240px) */
     background-color: #f8f9fa;
     border: 1px solid #ccc;
     font-size: 18px;
