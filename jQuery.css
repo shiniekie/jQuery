@@ -1,29 +1,19 @@
 body {
-    background-color: #ffffff;
     font-family: Arial, sans-serif;
+    padding: 20px;
 }
 
-/* Card Styling */
-.calculator-card {
-    background-color: #ffffff;
-    border-radius: 12px;
+input, select {
+    padding: 5px;
+    margin: 5px;
 }
 
-/* Inputs and Operator Dropdown */
-.custom-input, .custom-operator {
-    width: 100%;
-    height: 45px;
-    border-radius: 10px;
-    background-color: #f8f9fa;
+button {
+    padding: 5px 10px;
+    margin-top: 10px;
 }
 
-/* Solve Button */
-.solve-btn {
-    background-color: #f8f9fa;
-    border: 1px solid #ccc;
-    font-size: 18px;
-}
-
-.solve-btn:hover {
-    background-color: #e0e0e0;
+#result {
+    margin-top: 15px;
+    font-weight: bold;
 }
