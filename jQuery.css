@@ -3,17 +3,21 @@ body {
     padding: 20px;
 }
 
+/* Inputs and select */
 input, select {
     padding: 5px;
     margin: 5px;
 }
 
+/* Solve button */
 button {
     padding: 5px 10px;
     margin-top: 10px;
 }
 
+/* Result styling: slightly indented */
 #result {
     margin-top: 15px;
+    margin-left: 5px; /* slightly away from left edge */
     font-weight: bold;
 }
